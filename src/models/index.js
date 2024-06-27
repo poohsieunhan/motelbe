@@ -27,6 +27,9 @@ fs
     );
   })
   .forEach(file => {
+    // console.log("File is :" , file);
+    // const modelPath = path.join(__dirname, file);
+    // console.log('Loading model from:', modelPath)
     const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
     db[model.name] = model;
   });
